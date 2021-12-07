@@ -1,0 +1,14 @@
+Script started on 2021-12-07 15:47:12+01:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="236" LINES="34"]
+^[[C]0;mac@Bestia: ~/Projects/fullstack/fullstack-part12[01;32mmac@Bestia[00m:[01;34m~/Projects/fullstack/fullstack-part12[00m$ docker run -it ubuntu bash
+docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create": dial unix /var/run/docker.sock: connect: permission denied.
+See 'docker run --help'.
+]0;mac@Bestia: ~/Projects/fullstack/fullstack-part12[01;32mmac@Bestia[00m:[01;34m~/Projects/fullstack/fullstack-part12[00m$ sudo docker run -it ubuntu bash
+[sudo] password for mac: 
+]0;root@c2f0b4a86490: /root@c2f0b4a86490:/# [K]0;root@c2f0b4a86490: /root@c2f0b4a86490:/# mkdri  ir ur c sr/src/app
+]0;root@c2f0b4a86490: /root@c2f0b4a86490:/# touch usr/src/app/index.js
+]0;root@c2f0b4a86490: /root@c2f0b4a86490:/# [Kexit
+exit
+]0;mac@Bestia: ~/Projects/fullstack/fullstack-part12[01;32mmac@Bestia[00m:[01;34m~/Projects/fullstack/fullstack-part12[00m$ exit
+exit
+
+Script done on 2021-12-07 15:48:18+01:00 [COMMAND_EXIT_CODE="0"]
