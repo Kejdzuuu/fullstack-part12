@@ -1,0 +1,62 @@
+Script started on 2022-03-16 17:52:40+01:00 [TERM="xterm-256color" TTY="/dev/pts/8" COLUMNS="91" LINES="37"]
+]0;mac@Bestia: ~/Projects/fullstack/fullstack-part12/todo-app/todo-backend[01;32mmac@Bestia[00m:[01;34m~/Projects/fullstack/fullstack-part12/todo-app/todo-backend[00m$ sudo docker exec -i t todo_[K-backend_mongo_1 bash
+[sudo] password for mac: 
+]0;root@78d43d4b4ac8: /root@78d43d4b4ac8:/# [K]0;root@78d43d4b4ac8: /root@78d43d4b4ac8:/# mongo -u root -p example
+MongoDB shell version v5.0.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("e372ddf4-7a44-4de0-854b-ac2aae8c12a6") }
+MongoDB server version: 5.0.6
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2022-03-16T16:47:34.892+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+        2022-03-16T16:47:35.765+00:00: /sys/kernel/mm/transparent_hugepage/enabled is 'always'. We suggest setting it to 'never'
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs[3G[Jshow dbs[11G
+admin         0.000GB
+config        0.000GB
+local         0.000GB
+the_database  0.000GB
+> use the_database[3G[Juse the_database[19G
+switched to db the_database
+> show collections[3G[Jshow collections[19G
+todos
+> db.todos.find({})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("622fc5f14ea04c5fe785214e"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("622fc5f14ea04c5fe785214f"), "text" : "Learn about containers", "done" : false }
+{ "_id" : ObjectId("6230c15f3d1a843c87d58ad6"), "text" : "dupa", "done" : true, "__v" : 0 }
+> db.todos.insertOne({text: "Increase the number of tools in my toolbelt", done: false})[3G[Jdb.todos.insertOne({text: "Increase the number of tools in my toolbelt", done: false})[89G
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("623216a5fa961564d490b5bd")
+}
+> [3G[Jdb.todos.insertOne({text: "Increase the number of tools in my toolbelt", done: false})[89G[3G[Jdb.todos.find({})[20G[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("622fc5f14ea04c5fe785214e"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("622fc5f14ea04c5fe785214f"), "text" : "Learn about containers", "done" : false }
+{ "_id" : ObjectId("6230c15f3d1a843c87d58ad6"), "text" : "dupa", "done" : true, "__v" : 0 }
+{ "_id" : ObjectId("623216a5fa961564d490b5bd"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+> exit[3G[Jexit[7G
+bye
+]0;root@78d43d4b4ac8: /root@78d43d4b4ac8:/# t exit
+exit
+]0;mac@Bestia: ~/Projects/fullstack/fullstack-part12/todo-app/todo-backend[01;32mmac@Bestia[00m:[01;34m~/Projects/fullstack/fullstack-part12/todo-app/todo-backend[00m$ exit
+exit
+
+Script done on 2022-03-16 17:56:53+01:00 [COMMAND_EXIT_CODE="0"]
