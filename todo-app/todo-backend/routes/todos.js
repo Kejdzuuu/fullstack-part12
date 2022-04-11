@@ -25,7 +25,8 @@ router.post("/", async (req, res) => {
     text: req.body.text,
     done: false,
   });
-  const value = (await redis.getAsync(redis_todos_key)) ?? 0;
+  let value = parseInt(await redis.getAsync(redis_todos_key));
+  value = value ? value : 0;
   await redis.setAsync(redis_todos_key, value + 1);
   res.send(todo);
 });
